@@ -1,15 +1,12 @@
 #!/usr/bin/python3
-"""Basic Cache implementation Class
+"""0-basic_cache.py
 """
 BaseCaching = __import__('base_caching').BaseCaching
 
 
 class BasicCache(BaseCaching):
     """
-    A basic cache implementaion class
-
-    Attributes:
-        MAX_ITEMS: number of items that can be store in the cache
+    A basic cache implementaion clas that inherits from BaseCaching
     """
     def put(self, key, item):
         """ Add an item in the cache
