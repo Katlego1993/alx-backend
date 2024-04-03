@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""LIFO Cache Replacement Implementation Class
+"""2-lifo_cache.py
 """
 from threading import RLock
 
@@ -7,12 +7,15 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 
 class LIFOCache(BaseCaching):
-    """Represents an object that allows storing and 
-    retrieveing items from adictionary with a LIFO 
-    removal mechanism when the limit is reached
+    """
+    An implementation of LIFO(Last In Fisrt Out) Cache
+
+    Attributes:
+        __keys (list): Stores cache keys in order of entry using `.append`
+        __rlock (RLock): Lock accessed resources to prevent race condition
     """
     def __init__(self):
-        """ Initializes the cache
+        """ Instantiation method, sets instance attributes
         """
         super().__init__()
         self.__keys = []
