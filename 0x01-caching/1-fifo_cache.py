@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""FIFO Cache Replacement Implementation Class
+"""1-fifo_cache.py
 """
 from threading import RLock
 
@@ -7,12 +7,7 @@ BaseCaching = __import__('base_caching').BaseCaching
 
 
 class FIFOCache(BaseCaching):
-    """
-    An implementation of FIFO(First In Fisrt Out) Cache
-
-    Attributes:
-        __keys (list): Stores cache keys in order of entry using `.append`
-        __rlock (RLock): Lock accessed resources to prevent race condition
+    """A class FIFOCache that inherits from 'BaseCaching'
     """
     def __init__(self):
         """ Instantiation method, sets instance attributes
